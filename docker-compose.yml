@@ -1,0 +1,11 @@
+version: '3.8'
+services: 
+    api-service:
+        build: ./api/
+        volumes: 
+            - ./api/:/usr/src/app/
+        ports: 
+            - 5001:5000
+        environment: 
+            PORT: 5001
+            FLASK_DEBUG: 1
